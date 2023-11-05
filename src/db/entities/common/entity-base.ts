@@ -1,7 +1,7 @@
 import {
-  Column,
   CreateDateColumn,
   DeleteDateColumn,
+  PrimaryColumn,
   UpdateDateColumn
 } from 'typeorm'
 
@@ -12,7 +12,7 @@ import { getSnowflake } from '../../utils'
  * Provides common properties such as id, createdAt, updatedAt, and deletedAt.
  */
 export abstract class EntityBase {
-  @Column({
+  @PrimaryColumn({
     type: 'varchar'
   })
   public id: string = getSnowflake()
