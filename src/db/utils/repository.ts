@@ -12,7 +12,7 @@ const cache = new Map<EntityTarget<ObjectLiteral>, Repository<any>>()
  * @param {EntityTarget<T>} target - The entity target for which to get the repository instance.
  * @returns {Repository<T>} - The repository instance for the given entity target.
  */
-export function getRepo<T extends ObjectLiteral>(
+export function getRepository<T extends ObjectLiteral>(
   target: EntityTarget<T>
 ): Repository<T> {
   let repo = cache.get(target)

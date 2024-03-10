@@ -1,2 +1,2 @@
-export { getRepo } from './repo'
+export { getRepository } from './repository'
 export { getSnowflake, validateSnowflake } from './snowflake'
