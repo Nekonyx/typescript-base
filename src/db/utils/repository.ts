@@ -1,5 +1,4 @@
-import { EntityTarget, ObjectLiteral, Repository } from 'typeorm'
-
+import type { EntityTarget, ObjectLiteral, Repository } from 'typeorm'
 import { dataSource } from '../data-source'
 
 const cache = new Map<EntityTarget<ObjectLiteral>, Repository<any>>()
@@ -12,9 +11,7 @@ const cache = new Map<EntityTarget<ObjectLiteral>, Repository<any>>()
  * @param {EntityTarget<T>} target - The entity target for which to get the repository instance.
  * @returns {Repository<T>} - The repository instance for the given entity target.
  */
-export function getRepository<T extends ObjectLiteral>(
-  target: EntityTarget<T>
-): Repository<T> {
+export function getRepository<T extends ObjectLiteral>(target: EntityTarget<T>): Repository<T> {
   let repo = cache.get(target)
 
   if (!repo) {
