@@ -3,8 +3,8 @@
   "packageManager": "pnpm@9.0.6",
   "scripts": {
     "start": "node --enable-source-maps build/index.js",
-    "watch": "tsc -w",
-    "build": "tsc",
+    "watch": "tsc -p tsconfig.build.json -w",
+    "build": "tsc -p tsconfig.build.json",
     "lint": "biome lint src",
     "dev": "tsx --watch --enable-source-maps src/index.ts",
     "plop": "plop --plopfile ./plopfile.mjs",
