@@ -1,6 +1,6 @@
 {
   "private": true,
-  "packageManager": "pnpm@8.9.2",
+  "packageManager": "pnpm@9.0.6",
   "scripts": {
     "start": "node --enable-source-maps build/index.js",
     "watch": "tsc -w",
@@ -10,15 +10,15 @@
     "db:cli": "typeorm-ts-node-commonjs -d ./src/db/data-source.ts"
   },
   "dependencies": {
-    "reflect-metadata": "^0.2.1",
+    "reflect-metadata": "^0.2.2",
     "snowyflake": "^2.0.0",
     "typeorm": "^0.3.20"
   },
   "devDependencies": {
-    "@types/node": "^20.11.25",
+    "@types/node": "^20.12.7",
     "plop": "^4.0.1",
     "ts-node": "^10.9.2",
-    "tsc-watch": "^6.0.4",
-    "typescript": "^5.4.2"
+    "tsc-watch": "^6.2.0",
+    "typescript": "^5.4.5"
   }
 }
