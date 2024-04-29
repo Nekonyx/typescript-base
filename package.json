@@ -5,9 +5,10 @@
     "start": "node --enable-source-maps build/index.js",
     "watch": "tsc -w",
     "build": "tsc",
-    "dev": "tsc-watch --onSuccess \"pnpm start\"",
+    "dev": "tsx --watch --enable-source-maps src/index.ts",
     "plop": "plop --plopfile ./plopfile.mjs",
-    "db:cli": "typeorm-ts-node-commonjs -d ./src/db/data-source.ts"
+    "db:cli": "typeorm -d ./build/db/data-source.js",
+    "db:cli:dev": "tsx node_modules/typeorm/cli.js -d ./src/db/data-source.ts"
   },
   "dependencies": {
     "reflect-metadata": "^0.2.2",
@@ -17,8 +18,7 @@
   "devDependencies": {
     "@types/node": "^20.12.7",
     "plop": "^4.0.1",
-    "ts-node": "^10.9.2",
-    "tsc-watch": "^6.2.0",
+    "tsx": "^4.7.3",
     "typescript": "^5.4.5"
   }
 }
