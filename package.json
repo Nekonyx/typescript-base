@@ -17,10 +17,10 @@
     "typeorm": "^0.3.20"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.7.1",
-    "@types/node": "^20.12.7",
+    "@biomejs/biome": "^1.8.3",
+    "@types/node": "^20.16.3",
     "plop": "^4.0.1",
-    "tsx": "^4.7.3",
-    "typescript": "^5.4.5"
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4"
   }
 }
