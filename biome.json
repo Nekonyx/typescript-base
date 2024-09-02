@@ -31,7 +31,7 @@
       "unsafeParameterDecoratorsEnabled": true
     },
     "formatter": {
-      "trailingComma": "none",
+      "trailingCommas": "none",
       "semicolons": "asNeeded",
       "quoteStyle": "single",
       "bracketSpacing": true,
