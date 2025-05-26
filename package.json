@@ -1,26 +1,21 @@
 {
   "private": true,
-  "packageManager": "pnpm@9.0.6",
+  "packageManager": "pnpm@10.11.0",
   "scripts": {
     "start": "node --enable-source-maps build/index.js",
     "watch": "tsc -p tsconfig.build.json -w",
     "build": "tsc -p tsconfig.build.json",
     "lint": "biome lint src",
-    "dev": "tsx --watch --enable-source-maps src/index.ts",
-    "plop": "plop --plopfile ./plopfile.mjs",
-    "db:cli": "typeorm -d ./build/db/data-source.js",
-    "db:cli:dev": "tsx node_modules/typeorm/cli.js -d ./src/db/data-source.ts"
-  },
-  "dependencies": {
-    "reflect-metadata": "^0.2.2",
-    "snowyflake": "^2.0.0",
-    "typeorm": "^0.3.20"
+    "format": "biome format src --write",
+    "dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node --enable-source-maps build/index.js\""
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.3",
     "@types/node": "^20.16.3",
-    "plop": "^4.0.1",
-    "tsx": "^4.19.0",
+    "tsc-watch": "^7.0.0",
     "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "typedi": "^0.10.0"
   }
 }
