@@ -1,0 +1,4 @@
+{
+  // Turn Deno on
+  "deno.enable": true
+}

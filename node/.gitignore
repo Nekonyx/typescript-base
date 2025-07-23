@@ -1,0 +1,18 @@
+# User-specific
+/.idea/
+
+# Configuration
+/config.{yaml,yml,json}
+/.env
+/.env.dev
+/.env.local
+
+# Dependences
+/node_modules/
+/third-party/
+/vendor/
+
+# Output
+/build/
+/lib/
+/out/

@@ -1,4 +1,5 @@
-import Container from 'typedi'
+import 'reflect-metadata'
+import { Container } from 'typedi'
 import { App } from './app'
 
 async function bootstrap() {

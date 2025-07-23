@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "packageManager": "pnpm@10.13.1",
+  "scripts": {
+    "start": "node --enable-source-maps build/index.js",
+    "watch": "tsc -p tsconfig.build.json -w",
+    "dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node --enable-source-maps build/index.js\"",
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "biome check src --fix"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.2.2",
+    "typedi": "^0.10.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.1.2",
+    "@types/node": "^22.16.5"
+  }
+}
